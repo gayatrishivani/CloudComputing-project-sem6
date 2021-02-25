@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>home</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+        nav{
+            margin: 10px;
+            background-image: linear-gradient(to right, purple , skyblue);
+            height: 80px;
+
+        }
+        .navbar-brand{
+            font-family: 'Piedra', cursive;
+            position: absolute;
+            left: 950px;
+        }
+        .box{
+            width: 1600px;
+            height: 650px;
+            box-shadow: 4px 4px 4px 4px #aaa;
+            position: absolute;
+            align-content: center;
+            margin-left: 15px;
+        }
+        .block img{
+            max-width: 700px;
+            max-height: 650px;
+            
+            position: absolute;
+            margin-left: 90px;
+        }
+        .block1 img{
+            position: absolute;
+            max-height: 650px;
+            max-width: 700px;
+            left: 900px;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <body>
+    <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#" style="color: white;font-size: 35px;" >Sketch It-(uploaded)</a>
+    </nav>
+    <div class="box">
+        <div class="block" >
+            <img src=" {{url_for('static', filename=img_name)}}">
+        </div>
+        <div class="block1">
+            <img src=" {{url_for('static', filename=ps_name)}}" >
+        </div>
+    </div>
+    </body>
+</html>

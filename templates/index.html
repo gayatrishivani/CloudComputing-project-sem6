@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>home</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+        nav{
+            margin: 10px;
+            background-image: linear-gradient(to right, purple , skyblue);
+            height: 80px;
+
+        }
+        .navbar-brand{
+            font-family: 'Piedra', cursive;
+            position: absolute;
+            left: 950px;
+        }
+        .box{
+            width: 1600px;
+            height: 850px;
+            box-shadow: 4px 4px 4px 4px #aaa;
+            position: absolute;
+            margin-left: 200px;
+        }
+        .block img{
+            width: 800px;
+            height: 850px;
+            left: -150px;
+            position: absolute;
+            margin-left: 150px;
+        }
+        .block1{
+            position: absolute;
+            top: 200px;
+            left: 1050px;
+            font-family: 'Montserrat Subrayada', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <body>
+    <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#" style="color: white;font-size: 35px;" >Sketch It</a>
+    </nav>
+    <div class="box">
+        <div class="block">
+        <img src="https://i.pinimg.com/originals/40/61/3c/40613c3a9a32d6557fa37400ad6f9ab7.jpg">
+        </div>
+        <div class="block1">
+            <h1>Upload image</h1>
+        <form style="position: absolute;left: -100px;top: 150px;" id="from-cv" action="{{  url_for('sketch') }}" method="POST" enctype="multipart/form-data">
+            <button class="btn btn-info"><input type="file" name="file" accept="image/*"></button>
+            <button style="position: absolute;top: 50px;left: 0px;width: 150px;height: 50px" class="btn btn-info"> <input type="submit" value="sketch it"></button>
+
+        </form>
+        </div>
+    </div>
+    </body>
+</html>
